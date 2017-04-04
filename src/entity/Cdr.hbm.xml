@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 1, 2017 3:14:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Cdr" table="cdr" catalog="asteriskcdrdb" optimistic-lock="version">
+        <id name="recid" type="java.lang.Long">
+            <column name="recid" />
+            <generator class="identity" />
+        </id>
+        <property name="calldate" type="timestamp">
+            <column name="calldate" length="19" not-null="true" />
+        </property>
+        <property name="clid" type="string">
+            <column name="clid" length="80" not-null="true" />
+        </property>
+        <property name="src" type="string">
+            <column name="src" length="80" not-null="true" />
+        </property>
+        <property name="dst" type="string">
+            <column name="dst" length="80" not-null="true" />
+        </property>
+        <property name="dcontext" type="string">
+            <column name="dcontext" length="80" not-null="true" />
+        </property>
+        <property name="channel" type="string">
+            <column name="channel" length="80" not-null="true" />
+        </property>
+        <property name="dstchannel" type="string">
+            <column name="dstchannel" length="80" not-null="true" />
+        </property>
+        <property name="lastapp" type="string">
+            <column name="lastapp" length="80" not-null="true" />
+        </property>
+        <property name="lastdata" type="string">
+            <column name="lastdata" length="80" not-null="true" />
+        </property>
+        <property name="duration" type="int">
+            <column name="duration" not-null="true" />
+        </property>
+        <property name="billsec" type="int">
+            <column name="billsec" not-null="true" />
+        </property>
+        <property name="disposition" type="string">
+            <column name="disposition" length="45" not-null="true" />
+        </property>
+        <property name="amaflags" type="int">
+            <column name="amaflags" not-null="true" />
+        </property>
+        <property name="accountcode" type="string">
+            <column name="accountcode" length="20" not-null="true" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="uniqueid" length="32" not-null="true" />
+        </property>
+        <property name="userfield" type="string">
+            <column name="userfield" not-null="true" />
+        </property>
+        <property name="did" type="string">
+            <column name="did" length="50" not-null="true" />
+        </property>
+        <property name="recordingfile" type="string">
+            <column name="recordingfile" not-null="true" />
+        </property>
+        <property name="cnum" type="string">
+            <column name="cnum" length="40" not-null="true" />
+        </property>
+        <property name="cnam" type="string">
+            <column name="cnam" length="40" not-null="true" />
+        </property>
+        <property name="outboundCnum" type="string">
+            <column name="outbound_cnum" length="40" not-null="true" />
+        </property>
+        <property name="outboundCnam" type="string">
+            <column name="outbound_cnam" length="40" not-null="true" />
+        </property>
+        <property name="dstCnam" type="string">
+            <column name="dst_cnam" length="40" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
